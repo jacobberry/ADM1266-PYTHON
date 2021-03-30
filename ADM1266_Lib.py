@@ -1439,4 +1439,4 @@ def Get_Raw_Data_Offline(bb_data_list, record_number):
         j += 32
 
     for i in range(len(ADM1266_Address)):
-        BB_Data[i] = bb_data_list[32*(j):32*(j+1)]
+        BB_Data[i] = bb_data_list[64*(j):64*(j+1)]
