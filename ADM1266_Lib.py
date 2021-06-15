@@ -854,12 +854,16 @@ def Signals_Status_Fill():
                     o_val = "High"
                 else:
                     o_val = "Low"
+
                 if Signals_Data[i][j][3] == 1:
                     Signals_Status.append(
                         str(Signals_Data[i][j][0]) + " (Output) - Value : " + o_val)
-                if Signals_Data[i][j][3] == 0:
+                elif Signals_Data[i][j][3] == 0:
                     Signals_Status.append(
                         str(Signals_Data[i][j][0]) + " (Input) - Value : " + i_val)
+                else:
+                    Signals_Status.append(
+                        str(Signals_Data[i][j][0]) + " - Input Value : " + i_val + " - Output Value : " + o_val)
 
 
 def Rails_Status():
